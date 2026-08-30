@@ -6,8 +6,12 @@ const EMAIL = 'floxeninc@gmail.com';
 const PHONE = '647-461-9424';
 const SOCIALS = [
   { label: 'Instagram', href: 'https://instagram.com', Icon: Instagram },
-  { label: 'Facebook', href: 'https://facebook.com', Icon: Facebook },
-  { label: 'LinkedIn', href: 'https://linkedin.com', Icon: Linkedin },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61594079846123',
+    Icon: Facebook,
+  },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/floxen-inc/', Icon: Linkedin },
 ];
 
 export default function Footer() {
