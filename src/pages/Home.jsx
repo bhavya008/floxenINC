@@ -1,5 +1,6 @@
 import About from '@/components/floxen/About';
 import AddOns from '@/components/floxen/AddOns';
+import BlogSection from '@/components/floxen/BlogSection';
 import Footer from '@/components/floxen/Footer';
 import Hero from '@/components/floxen/Hero';
 import HowItWorks from '@/components/floxen/HowItWorks';
@@ -17,6 +18,7 @@ export default function Home() {
         <AddOns />
         <HowItWorks />
         <Pricing />
+        <BlogSection />
         <About />
       </main>
       <Footer />
