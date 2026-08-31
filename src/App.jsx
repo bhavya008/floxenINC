@@ -1,6 +1,7 @@
 import Home from '@/pages/Home';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import BlogDetail from './components/floxen/BlogDetail';
+import WorkDetail from './components/floxen/WorkDetail';
 import ScrollToTop from './components/ScrollToTop';
 
 function NotFound() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
+        <Route path="/work/:slug" element={<WorkDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

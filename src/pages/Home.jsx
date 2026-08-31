@@ -1,5 +1,4 @@
 import About from '@/components/floxen/About';
-import AddOns from '@/components/floxen/AddOns';
 import BlogSection from '@/components/floxen/BlogSection';
 import Footer from '@/components/floxen/Footer';
 import Hero from '@/components/floxen/Hero';
@@ -7,6 +6,7 @@ import HowItWorks from '@/components/floxen/HowItWorks';
 import Nav from '@/components/floxen/Nav';
 import Pricing from '@/components/floxen/Pricing';
 import Services from '@/components/floxen/Services';
+import WorkShowcase from '@/components/floxen/WorkShowcase';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <main>
         <Hero />
         <Services />
-        <AddOns />
+        <WorkShowcase />
         <HowItWorks />
         <Pricing />
         <BlogSection />
