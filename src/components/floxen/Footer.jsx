@@ -5,7 +5,7 @@ import Logo from './Logo';
 const EMAIL = 'floxeninc@gmail.com';
 const PHONE = '647-461-9424';
 const SOCIALS = [
-  { label: 'Instagram', href: 'https://instagram.com', Icon: Instagram },
+  { label: 'Instagram', href: 'https://www.instagram.com/floxeninc/', Icon: Instagram },
   {
     label: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61594079846123',
