@@ -1,4 +1,5 @@
 import Home from '@/pages/Home';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import BlogDetail from './components/floxen/BlogDetail';
 import WorkDetail from './components/floxen/WorkDetail';
@@ -22,6 +23,7 @@ function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/blog/:slug" element={<BlogDetail />} />
         <Route path="/work/:slug" element={<WorkDetail />} />
         <Route path="*" element={<NotFound />} />

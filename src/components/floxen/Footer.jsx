@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './Logo';
 
 const EMAIL = 'floxeninc@gmail.com';
@@ -82,9 +83,17 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-          <p className="text-[13px] text-white/40">
-            © {new Date().getFullYear()} Floxen. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-center gap-6">
+            <Link
+              to="/privacy-policy"
+              className="text-[13px] text-white/60 hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <p className="text-[13px] text-white/40">
+              © {new Date().getFullYear()} Floxen. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
