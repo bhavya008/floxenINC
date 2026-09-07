@@ -109,7 +109,7 @@ export default function Pricing() {
           style={{
             fontSize: 'clamp(2.25rem, 5vw, 4rem)',
             letterSpacing: '-0.04em',
-            maxWidth: '14ch',
+            maxWidth: 'none',
           }}
         >
           Straightforward pricing.

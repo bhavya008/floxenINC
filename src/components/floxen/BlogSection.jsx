@@ -19,7 +19,8 @@ export default function BlogSection() {
           style={{
             fontSize: 'clamp(2.25rem, 5vw, 4rem)',
             letterSpacing: '-0.04em',
-            maxWidth: '12ch',
+            lineHeight: 0.92,
+            maxWidth: 'none',
           }}
         >
           Insights for growing brands.

@@ -20,7 +20,7 @@ export default function WorkShowcase() {
             fontSize: 'clamp(2.4rem, 5vw, 4.5rem)',
             letterSpacing: '-0.05em',
             lineHeight: 0.95,
-            maxWidth: '11ch',
+            maxWidth: 'none',
           }}
         >
           Premium digital work.
