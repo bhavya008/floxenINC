@@ -5,8 +5,9 @@ const siteUrl = 'https://floxen.ca';
 const routes = [
   {
     path: '/privacy-policy',
-    title: 'Privacy Policy | Floxen',
-    description: 'Privacy policy for Floxen, a web design studio in Sudbury, Ontario.',
+    title: 'Privacy Policy and Data Protection | Floxen',
+    description:
+      "Read Floxen's privacy policy to understand how our Sudbury web design studio collects, uses, and protects information.",
     heading: 'Privacy Policy',
     subheading: 'How Floxen handles information',
   },
@@ -70,6 +71,10 @@ function replaceMeta(html, selector, replacement) {
   return html.replace(selector, replacement);
 }
 
+function getFallbackContent(route) {
+  return `${route.description} Floxen is a web design studio serving Sudbury and businesses across Greater Sudbury, including downtown Sudbury, New Sudbury, the South End, Minnow Lake, Valley East, Chelmsford, Lively, and nearby communities. We create fast, accessible websites that help local businesses explain their services, earn trust, and make it easy for customers to call, email, or visit. Our work combines clear content, responsive design, reliable hosting, technical SEO, and practical local search guidance. Every page should have a clear purpose, useful information, and a straightforward next step for the visitor. This page is part of the Floxen website and connects to related resources so visitors and search engines can discover more of the site. We focus on honest recommendations, useful information, and websites that businesses can maintain over time. The result is a stronger online presence for independent shops, studios, professional services, and growing companies that want to be found by the people they serve. Read the page above for the specific topic, then explore the related guides or contact Floxen to discuss a website project in Sudbury, Ontario.`;
+}
+
 for (const route of routes) {
   const canonical = `${siteUrl}${route.path}`;
   let html = template;
@@ -102,7 +107,7 @@ for (const route of routes) {
   html = html.replace(/<noscript>[\s\S]*?<\/noscript>/, '');
   html = html.replace(
     '<div id="root"></div>',
-    `<div id="root"></div><noscript><main><h1>${route.heading}</h1><h2>${route.subheading}</h2><p>${route.description}</p><nav aria-label="Site links"><a href="/">Home</a><a href="/blog/local-seo-101-sudbury-businesses">Local SEO for Sudbury businesses</a><a href="/privacy-policy">Privacy Policy</a></nav></main></noscript>`,
+    `<div id="root"></div><noscript><main><h1>${route.heading}</h1><h2>${route.subheading}</h2><p>${getFallbackContent(route)}</p><nav aria-label="Site links"><a href="/">Home</a><a href="/blog/local-seo-101-sudbury-businesses">Local SEO for Sudbury businesses</a><a href="/privacy-policy">Privacy Policy</a></nav></main></noscript>`,
   );
 
   const outputDirectory = path.join(dist, route.path.slice(1));

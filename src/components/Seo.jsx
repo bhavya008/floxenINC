@@ -64,7 +64,7 @@ export default function Seo() {
       post?.excerpt ||
       project?.short ||
       (isPrivacy
-        ? 'Privacy policy for Floxen, a web design studio in Sudbury, Ontario.'
+        ? "Read Floxen's privacy policy to understand how our Sudbury web design studio collects, uses, and protects information."
         : DEFAULT_DESCRIPTION);
 
     document.title = title;
