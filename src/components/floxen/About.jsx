@@ -27,7 +27,7 @@ export default function About() {
               maxWidth: '12ch',
             }}
           >
-            Sudbury web design, built local.
+            A young studio, built local.
           </Reveal>
           <Reveal as="div">
             <p className="text-[#121212]/85" style={{ fontSize: '1.2rem', lineHeight: 1.6 }}>
