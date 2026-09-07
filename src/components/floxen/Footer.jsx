@@ -68,31 +68,6 @@ export default function Footer() {
 
         <div className="mt-20 pt-8 border-t border-white/15 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
           <Logo onDark />
-          <nav aria-label="Helpful links">
-            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-white/60">
-              <li>
-                <Link
-                  to="/blog/local-seo-101-sudbury-businesses"
-                  className="hover:text-white transition-colors"
-                >
-                  Local SEO for Sudbury
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog/website-builder-vs-custom-web-design-sudbury"
-                  className="hover:text-white transition-colors"
-                >
-                  Website builder guide
-                </Link>
-              </li>
-              <li>
-                <Link to="/work/sp-real-estate" className="hover:text-white transition-colors">
-                  Case study
-                </Link>
-              </li>
-            </ul>
-          </nav>
           <ul className="flex flex-wrap gap-3">
             {SOCIALS.map((s) => (
               <li key={s.label}>
