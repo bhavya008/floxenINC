@@ -44,15 +44,15 @@ export default function Hero() {
             maxWidth: '16ch',
           }}
         >
-          Websites that put local businesses on the map.
+          Web design for Sudbury businesses that want to be found.
         </h1>
 
         <p
           className="mt-8 text-[#575757] max-w-xl"
           style={{ fontSize: 'clamp(1.05rem, 1.6vw, 1.35rem)', lineHeight: 1.6 }}
         >
-          We build, host, and maintain fast, modern websites for the shops, studios, and services in
-          your neighborhood.
+          We build, host, and maintain fast, modern websites for shops, studios, and service
+          businesses across Sudbury and Greater Sudbury.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">

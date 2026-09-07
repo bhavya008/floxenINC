@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import BlogDetail from './components/floxen/BlogDetail';
 import WorkDetail from './components/floxen/WorkDetail';
 import ScrollToTop from './components/ScrollToTop';
+import Seo from './components/Seo';
 
 function NotFound() {
   return (
@@ -21,6 +22,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <Seo />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

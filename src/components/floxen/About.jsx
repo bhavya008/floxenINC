@@ -27,13 +27,14 @@ export default function About() {
               maxWidth: '12ch',
             }}
           >
-            A young studio, built local.
+            Sudbury web design, built local.
           </Reveal>
           <Reveal as="div">
             <p className="text-[#121212]/85" style={{ fontSize: '1.2rem', lineHeight: 1.6 }}>
               Floxen is a small, modern web design studio. We live where you do — in the
               neighborhood — and we believe the bakery, the barbershop, and the gym down the street
-              deserve a website as sharp as any big-brand site.
+              deserve a website as sharp as any big-brand site. We help Greater Sudbury businesses
+              get discovered, earn trust, and turn local searches into real conversations.
             </p>
             <p
               className="mt-5 text-[#121212]/70"

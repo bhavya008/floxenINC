@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import Reveal from './Revel';
 
 export default function WorkShowcase() {
-  const gridClass =
-    WORK_PROJECTS.length === 1 ? 'xl:grid-cols-1 max-w-4xl mx-auto' : 'xl:grid-cols-3';
-
   return (
     <section id="work" className="bg-[#121212] py-24 md:py-32">
       <div className="mx-auto px-[8vw]">
@@ -33,19 +30,11 @@ export default function WorkShowcase() {
           stronger online presence.
         </Reveal>
 
-        <div className={`mt-12 grid gap-6 ${gridClass}`}>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {WORK_PROJECTS.map((project, index) => (
             <Reveal key={project.slug} delay={index * 90}>
               <article className="group h-full overflow-hidden rounded-[30px] border border-white/10 bg-white/5 shadow-[0_20px_45px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:-translate-y-1">
                 <Link to={`/work/${project.slug}`} className="block h-full">
-                  <div className="overflow-hidden">
-                    <img
-                      src={project.cover}
-                      alt={project.title}
-                      className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-
                   <div className="p-6">
                     <div className="flex items-center justify-between gap-3">
                       <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-[#f7ce2e]">
