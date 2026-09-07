@@ -1,0 +1,16 @@
+{
+  "name": "Floxen - Web Design Studio in Sudbury",
+  "short_name": "Floxen",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7ce2e",
+  "theme_color": "#f7ce2e",
+  "icons": [
+    {
+      "src": "/FLOXEN.png",
+      "sizes": "360x360",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
