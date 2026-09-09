@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Logo from './Logo';
 
 const LINKS = [
@@ -9,8 +10,12 @@ const LINKS = [
 ];
 
 export default function Nav() {
+  const { pathname } = useLocation();
+  const isHomePage = pathname === '/';
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const getSectionHref = (hash) => (isHomePage ? hash : `/${hash}`);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -28,15 +33,15 @@ export default function Nav() {
       }}
     >
       <nav className="mx-auto flex items-center justify-between px-[8vw] py-5">
-        <a href="#top" aria-label="Floxen home" className="flex items-center">
+        <Link to="/" aria-label="Floxen home" className="flex items-center">
           <Logo />
-        </a>
+        </Link>
 
         <ul className="hidden md:flex items-center gap-9">
           {LINKS.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={getSectionHref(l.href)}
                 className="text-[14px] font-medium uppercase tracking-[0.08em] text-[#121212] hover:opacity-60 transition-opacity"
               >
                 {l.label}
@@ -47,7 +52,7 @@ export default function Nav() {
 
         <div className="hidden md:block">
           <a
-            href="#contact"
+            href={getSectionHref('#contact')}
             className="inline-flex items-center justify-center bg-[#121212] text-white font-medium text-[14px] uppercase tracking-[0.08em] px-6 py-3 rounded-full hover:bg-[#2a2a2a] transition-colors"
             style={{ minHeight: 48 }}
           >
@@ -76,7 +81,7 @@ export default function Nav() {
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
-                  href={l.href}
+                  href={getSectionHref(l.href)}
                   onClick={() => setOpen(false)}
                   className="block py-4 text-[16px] font-medium uppercase tracking-[0.08em] text-[#121212] border-b border-[#121212]/10 last:border-0"
                 >
@@ -86,7 +91,7 @@ export default function Nav() {
             ))}
             <li className="pt-4">
               <a
-                href="#contact"
+                href={getSectionHref('#contact')}
                 onClick={() => setOpen(false)}
                 className="block text-center bg-[#121212] text-white font-medium text-[14px] uppercase tracking-[0.08em] px-6 py-3 rounded-full"
               >
